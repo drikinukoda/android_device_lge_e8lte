@@ -1,10 +1,39 @@
 # mount point	fstype    device    	[device2]
 
-/boot       mtd         boot
-/cache      yaffs2      cache
-/data       yaffs2      userdata
-/misc       mtd         misc
-/recovery   mtd         recovery
-/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
-/system     yaffs2      system
-/sd-ext     ext4        /dev/block/mmcblk0p2
+/boot       emmc      /dev/block/platform/msm_sdcc.1/by-name/boot
+/cache      ext4      /dev/block/platform/msm_sdcc.1/by-name/cache
+/data       ext4      /dev/block/platform/msm_sdcc.1/by-name/userdata
+/misc       emmc      /dev/block/platform/msm_sdcc.1/by-name/misc
+/recovery   emmc      /dev/block/platform/msm_sdcc.1/by-name/recovery
+/sdcard     vfat      /dev/block/mmcblk0p34        /dev/block/mmcblk0
+/system     ext4      /dev/block/platform/msm_sdcc.1/by-name/system
+/persist    ext4      /dev/block/platform/msm_sdcc.1/by-name/persist
+/firmware   vfat      /dev/block/platform/msm_sdcc.1/by-name/modem
+/sns        ext4      /dev/block/bootdevice/by-name/sns
+/persist-lg ext4      /dev/block/bootdevice/by-name/drm
+/mpt        ext4      /dev/block/bootdevice/by-name/mpt
+/cust       ext4      /dev/block/platform/msm_sdcc.1/by-name/cust
+/aboot      emmc      /dev/block/platform/msm_sdcc.1/by-name/aboot
+/abootb      emmc      /dev/block/platform/msm_sdcc.1/by-name/abootb
+/sbl1         emmc      /dev/block/platform/msm_sdcc.1/by-name/sbl1
+/sbl1b        emmc      /dev/block/platform/msm_sdcc.1/by-name/sbl1b
+/rpm          emmc      /dev/block/platform/msm_sdcc.1/by-name/rpm
+/rpmb         emmc      /dev/block/platform/msm_sdcc.1/by-name/rpmb
+/tz           emmc      /dev/block/platform/msm_sdcc.1/by-name/tz
+/tzb          emmc      /dev/block/platform/msm_sdcc.1/by-name/tzb
+/sdi          emmc      /dev/block/platform/msm_sdcc.1/by-name/sdi
+/eksst        emmc      /dev/block/platform/msm_sdcc.1/by-name/emmc
+/pad          emmc      /dev/block/platform/msm_sdcc.1/by-name/pad
+/modemst1     emmc      /dev/block/platform/msm_sdcc.1/by-name/modemst1
+/modemst2     emmc      /dev/block/platform/msm_sdcc.1/by-name/modemst2
+/laf          emmc      /dev/block/platform/msm_sdcc.1/by-name/laf
+/fsg          emmc      /dev/block/platform/msm_sdcc.1/by-name/fsg
+/fsc          emmc      /dev/block/platform/msm_sdcc.1/by-name/fsc
+/ssd          emmc      /dev/block/platform/msm_sdcc.1/by-name/ssd
+/encrypt      emmc      /dev/block/platform/msm_sdcc.1/by-name/encrypt
+/rct          emmc      /dev/block/platform/msm_sdcc.1/by-name/rct
+/DDR          emmc      /dev/block/platform/msm_sdcc.1/by-name/DDR
+/factory      emmc      /dev/block/platform/msm_sdcc.1/by-name/factory
+/fota         emmc      /dev/block/platform/msm_sdcc.1/by-name/fota
+/grow         emmc      /dev/block/platform/msm_sdcc.1/by-name/grow
+/external_sd  vfat      /dev/block/mmcblk1p1   /dev/block/mmcblk1   flags=display="Micro SDcard";storage;wipeingui;removable
